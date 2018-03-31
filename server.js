@@ -1,13 +1,10 @@
-// DEPENDENCIES:
-// intialize Express
+
 var express = require('express');
 var app = express();
 var path = require('path');
-// var request = require('request');
-var fs = require('fs');
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
-;
+var morgan = require('morgan');
 
 app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json());
@@ -15,13 +12,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
-// app.engine('handlebars', exphbs({
-//   defaultLayout: 'main', extname: '.handlebars'
-// }));
-// app.set('view engine', 'handlebars');
+app.engine('handlebars', exphbs({
+defaultLayout: 'main', extname: '.handlebars'
+}));
+app.set('view engine', 'handlebars');
 
-// require("./controllers/controller.js")(app);
-var url ='http://www.indeed.com'
+
+var url ='https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword=web+developer&sc.keyword=web+developer&locT=C&locId=1154247&jobType='
 require("./routes")(app);
 //port
 var PORT = process.env.PORT || 3000;
