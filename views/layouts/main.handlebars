@@ -1,14 +1,38 @@
-
 <!DOCTYPE html>
-<html lang='en-us'>
+<html lang="en">
 <head>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<title> Web Scraper</title>
-<!-- Bulma CDN, CSS, FontAwesome, Google Fonts -->
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css'>
-<link rel='stylesheet' type='text/css' href='assets/css/style.css'>
-<script defer src='https://use.fontawesome.com/releases/v5.0.0/js/all.js'></script>
-</head>
-<body>
-    {{{body}}}
-</body>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+    <!--boostrap cdn link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>Job Scraper</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+	</head>
+	<body>
+        <header>
+            <nav class="nav fixed-top bg-info" id="nav-bar">
+                <a class="nav-link" href="/" id="homeButton">Home</a>
+                <a class="nav-link" href="/saved" id="savedJobButton">My Saved Jobs</a>
+                <a class="btn btn-danger" id="scrapeJobs">Scrape New Job Openings</a>
+            </nav>  
+            <div class="container">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container container-fluid">
+                        <h1 class="display-3 text-center">Job Search</h1>
+                        <p class="lead text-center">Get the latest web developer jobs from glassdoor.com. Save your favorite opportunities and save a note for yourself about your top choices.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </header>
+        
+        <div class="container">
+            <div id="articles">
+                {{{ body }}}
+            </div>
+        </div>
+		
+	</body>
+</html>
+<script src="/assets/javascript/app.js"></script>
