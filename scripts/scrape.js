@@ -1,5 +1,9 @@
-var osmosis = require('osmosis');
-var website = "https://www.wsj.com/"
+const osmosis = require('osmosis');
+const website = 'https://www.wsj.com/'
 console.log("You are scraping.")
 
-var wsj = osmosis.get(website);
+const wsj = osmosis.get(website);
+
+const headingLocation = 
+
+console.log(wsj);

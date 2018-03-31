@@ -4,7 +4,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
-var osmosis = require('osmosis');
+;
 
 app.use(express.static(__dirname + '/public'))
 app.use(bodyParser.json());
